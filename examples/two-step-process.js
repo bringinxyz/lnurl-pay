@@ -6,7 +6,7 @@
  * the invoice separately.
  */
 
-const lnurlPay = require("@bringin/lnurl-pay");
+const lnurlPay = require("@bringinxyz/lnurl-pay");
 
 async function twoStepProcess() {
   console.log("=== Two-Step Process Example ===\n");

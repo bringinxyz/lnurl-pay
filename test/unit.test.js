@@ -1,11 +1,11 @@
 /**
- * Unit Tests for @bringin/lnurl-pay
+ * Unit Tests for @bringinxyz/lnurl-pay
  *
  * These tests focus on validation, helper functions, and edge cases
  * without requiring network requests.
  */
 
-const lnurlPay = require("@bringin/lnurl-pay");
+const lnurlPay = require("@bringinxyz/lnurl-pay");
 
 /**
  * Test utilities
@@ -387,7 +387,7 @@ function testApiCompatibility() {
  * Run all unit tests
  */
 function runAllUnitTests() {
-  console.log("🧪 Unit Tests for @bringin/lnurl-pay");
+  console.log("🧪 Unit Tests for @bringinxyz/lnurl-pay");
   console.log("=".repeat(60));
 
   const startTime = Date.now();

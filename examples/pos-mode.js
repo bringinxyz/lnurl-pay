@@ -5,7 +5,7 @@
  * that would be impossible with standard lnurl-pay!
  */
 
-const lnurlPay = require("@bringin/lnurl-pay");
+const lnurlPay = require("@bringinxyz/lnurl-pay");
 
 async function posModeExample() {
   console.log("=== POS Mode Example ===\n");

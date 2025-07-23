@@ -1,4 +1,4 @@
-declare module "@bringin/lnurl-pay" {
+declare module "@bringinxyz/lnurl-pay" {
   export interface LnurlPayOptions {
     lnUrlOrAddress: string;
     tokens: number;

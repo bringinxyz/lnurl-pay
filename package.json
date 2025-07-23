@@ -1,5 +1,5 @@
 {
-  "name": "@bringin/lnurl-pay",
+  "name": "@bringinxyz/lnurl-pay",
   "version": "1.0.0",
   "description": "Enhanced LNURL Pay with Bringin POS mode support for Lightning micro-payments (20+ sats vs 22k+ sats)",
   "main": "index.js",
@@ -26,14 +26,14 @@
     "micro-transactions",
     "lightning-network"
   ],
-  "author": "Bringin <dev@bringin.xyz>",
+  "author": "Bringin <pc@bringin.xyz>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bringinxyz/bringin-lnurl-pay"
+    "url": "https://github.com/bringinxyz/lnurl-pay"
   },
   "bugs": {
-    "url": "https://github.com/bringinxyz/bringin-lnurl-pay/issues"
+    "url": "https://github.com/bringinxyz/lnurl-pay/issues"
   },
   "homepage": "https://bringin.xyz",
   "dependencies": {

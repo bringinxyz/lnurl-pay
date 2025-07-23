@@ -5,7 +5,7 @@
  * side by side.
  */
 
-const lnurlPay = require("@bringin/lnurl-pay");
+const lnurlPay = require("@bringinxyz/lnurl-pay");
 
 async function compareModes() {
   console.log("=== Standard vs POS Mode Comparison ===\n");

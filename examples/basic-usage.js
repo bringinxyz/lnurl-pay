@@ -1,11 +1,11 @@
 /**
  * Basic Usage Example
  *
- * This example demonstrates that @bringin/lnurl-pay works exactly like lnurl-pay
+ * This example demonstrates that @bringinxyz/lnurl-pay works exactly like lnurl-pay
  * for standard usage - it's a true drop-in replacement!
  */
 
-const lnurlPay = require("@bringin/lnurl-pay");
+const lnurlPay = require("@bringinxyz/lnurl-pay");
 
 async function basicUsage() {
   console.log("=== Basic Usage Example ===\n");

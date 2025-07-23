@@ -1,11 +1,11 @@
 /**
- * Integration Tests for @bringin/lnurl-pay
+ * Integration Tests for @bringinxyz/lnurl-pay
  *
  * These tests verify the package works correctly with real Bringin endpoints
  * and maintains compatibility with lnurl-pay.
  */
 
-const lnurlPay = require("@bringin/lnurl-pay");
+const lnurlPay = require("@bringinxyz/lnurl-pay");
 
 // Test configuration
 const TEST_ADDRESS = "prashanth@bringin.xyz";
@@ -247,7 +247,7 @@ async function testMultipleAmounts() {
  * Run all tests
  */
 async function runAllTests() {
-  console.log("🧪 Integration Tests for @bringin/lnurl-pay");
+  console.log("🧪 Integration Tests for @bringinxyz/lnurl-pay");
   console.log("=".repeat(60));
 
   const startTime = Date.now();

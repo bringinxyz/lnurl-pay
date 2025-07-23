@@ -1,9 +1,9 @@
-# @bringin/lnurl-pay
+# @bringinxyz/lnurl-pay
 
 Enhanced LNURL Pay with Bringin POS mode support for Lightning micro-payments
 
-[![npm version](https://badge.fury.io/js/%40bringin%2Flnurl-pay.svg)](https://www.npmjs.com/package/@bringin/lnurl-pay)
-[![Downloads](https://img.shields.io/npm/dm/@bringin/lnurl-pay.svg)](https://www.npmjs.com/package/@bringin/lnurl-pay)
+[![npm version](https://badge.fury.io/js/%40bringinxyz%2Flnurl-pay.svg)](https://www.npmjs.com/package/@bringinxyz/lnurl-pay)
+[![Downloads](https://img.shields.io/npm/dm/@bringinxyz/lnurl-pay.svg)](https://www.npmjs.com/package/@bringinxyz/lnurl-pay)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Official Bringin library for Lightning Network micro-payments**
@@ -20,7 +20,7 @@ Enhanced LNURL Pay with Bringin POS mode support for Lightning micro-payments
 ### Quick Start
 
 ```javascript
-const lnurlPay = require('@bringin/lnurl-pay');
+const lnurlPay = require('@bringinxyz/lnurl-pay');
 
 // ❌ This would fail with standard mode (below 22k sats minimum)
 // ✅ This works with POS mode!
@@ -47,15 +47,15 @@ console.log('Micro-payment invoice:', microPayment.invoice);
 
 ```bash
 # For Node 18+ (built-in fetch)
-npm install @bringin/lnurl-pay
+npm install @bringinxyz/lnurl-pay
 
 # For older Node versions
-npm install @bringin/lnurl-pay axios
+npm install @bringinxyz/lnurl-pay axios
 ```
 
 ## 🔄 Migration from lnurl-pay
 
-Migrating from `lnurl-pay` to `@bringin/lnurl-pay` is seamless:
+Migrating from `lnurl-pay` to `@bringinxyz/lnurl-pay` is seamless:
 
 ### Before (lnurl-pay)
 ```javascript
@@ -67,9 +67,9 @@ const invoice = await lnurlPay.requestInvoice({
 });
 ```
 
-### After (@bringin/lnurl-pay)
+### After (@bringinxyz/lnurl-pay)
 ```javascript
-const lnurlPay = require('@bringin/lnurl-pay');
+const lnurlPay = require('@bringinxyz/lnurl-pay');
 
 // Same code works + new POS mode capability!
 const invoice = await lnurlPay.requestInvoice({
@@ -86,7 +86,7 @@ const invoice = await lnurlPay.requestInvoice({
 ### Basic Usage (Drop-in Replacement)
 
 ```javascript
-const lnurlPay = require('@bringin/lnurl-pay');
+const lnurlPay = require('@bringinxyz/lnurl-pay');
 
 // Standard usage - exactly same as lnurl-pay
 const invoice = await lnurlPay.requestInvoice({
@@ -236,11 +236,11 @@ try {
 
 ## 🏢 Professional Branding
 
-As an official Bringin package, `@bringin/lnurl-pay` provides:
+As an official Bringin package, `@bringinxyz/lnurl-pay` provides:
 
 - **Guaranteed Quality**: Official Bringin development standards
 - **Long-term Support**: Backed by the Bringin team
-- **Package Discovery**: Easy to find under `@bringin` namespace
+- **Package Discovery**: Easy to find under `@bringinxyz` namespace
 - **Trust Factor**: Users know it's the official Bringin package
 - **Future Growth**: Part of the Bringin ecosystem
 
@@ -254,9 +254,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- **GitHub Issues**: https://github.com/bringinxyz/bringin-lnurl-pay/issues
-- **Documentation**: https://github.com/bringinxyz/bringin-lnurl-pay#readme
-- **NPM Package**: https://www.npmjs.com/package/@bringin/lnurl-pay
+- **GitHub Issues**: https://github.com/bringinxyz/lnurl-pay/issues
+- **Documentation**: https://github.com/bringinxyz/lnurl-pay#readme
+- **NPM Package**: https://www.npmjs.com/package/@bringinxyz/lnurl-pay
 - **Company Website**: https://bringin.xyz
 
 ## 🙏 Acknowledgments
@@ -267,4 +267,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Ready to enable micro-payments?** Install `@bringin/lnurl-pay` today and unlock 99.9% lower minimum payments! ⚡
+**Ready to enable micro-payments?** Install `@bringinxyz/lnurl-pay` today and unlock 99.9% lower minimum payments! ⚡
