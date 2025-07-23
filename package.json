@@ -1,0 +1,61 @@
+{
+  "name": "@bringin/lnurl-pay",
+  "version": "1.0.0",
+  "description": "Enhanced LNURL Pay with Bringin POS mode support for Lightning micro-payments (20+ sats vs 22k+ sats)",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node test/integration.test.js",
+    "example:basic": "node examples/basic-usage.js",
+    "example:pos": "node examples/pos-mode.js",
+    "example:comparison": "node examples/comparison.js",
+    "prepublish": "npm test"
+  },
+  "keywords": [
+    "lnurl",
+    "lightning",
+    "bitcoin",
+    "bringin",
+    "pos",
+    "micropayments",
+    "lnurl-pay",
+    "satoshis",
+    "micro-transactions",
+    "lightning-network"
+  ],
+  "author": "Bringin <dev@bringin.xyz>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bringinxyz/bringin-lnurl-pay"
+  },
+  "bugs": {
+    "url": "https://github.com/bringinxyz/bringin-lnurl-pay/issues"
+  },
+  "homepage": "https://bringin.xyz",
+  "dependencies": {
+    "lnurl-pay": "^4.0.0"
+  },
+  "peerDependencies": {
+    "axios": "^1.6.0"
+  },
+  "peerDependenciesMeta": {
+    "axios": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE",
+    "examples/",
+    "docs/"
+  ]
+}

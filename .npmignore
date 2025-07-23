@@ -1,0 +1,31 @@
+# Development files
+.git/
+.gitignore
+.npmignore
+*.test.js
+*.spec.js
+
+# Build tools
+.eslintrc*
+.prettierrc*
+tsconfig.json
+webpack.config.js
+rollup.config.js
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+tmp/
+temp/
+
+# Test files (but keep examples and docs)
+test/ 
