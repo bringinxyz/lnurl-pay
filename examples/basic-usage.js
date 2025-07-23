@@ -5,10 +5,11 @@
  * for standard usage - it's a true drop-in replacement!
  */
 
-const lnurlPay = require("@bringinxyz/lnurl-pay");
+const lnurlPay = require("../index.js");
 
 async function basicUsage() {
-  console.log("=== Basic Usage Example ===\n");
+  console.log("[EXAMPLE] Basic Usage Example");
+  console.log("=".repeat(50));
 
   try {
     // Standard usage - exactly same as lnurl-pay
@@ -17,7 +18,7 @@ async function basicUsage() {
       tokens: 25000, // Standard amount above 22k minimum
     });
 
-    console.log("✅ Standard invoice generated successfully!");
+    console.log("[SUCCESS] Standard invoice generated successfully!");
     console.log("Amount:", 25000, "sats");
     console.log("Invoice:", invoice.invoice.substring(0, 50) + "...");
     console.log("Description:", invoice.params.description);
@@ -26,9 +27,9 @@ async function basicUsage() {
       console.log("Success message:", invoice.successAction.message);
     }
 
-    console.log("\n🎉 Works exactly like lnurl-pay - no changes needed!");
+    console.log("\n[INFO] Works exactly like lnurl-pay - no changes needed!");
   } catch (error) {
-    console.error("❌ Error:", error.message);
+    console.error("[ERROR] Error:", error.message);
   }
 }
 

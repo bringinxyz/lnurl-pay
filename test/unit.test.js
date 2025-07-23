@@ -5,18 +5,18 @@
  * without requiring network requests.
  */
 
-const lnurlPay = require("@bringinxyz/lnurl-pay");
+const lnurlPay = require("../index.js");
 
 /**
  * Test utilities
  */
 function logTest(name, status, details = "") {
-  const icon = status === "PASS" ? "✅" : "❌";
+  const icon = status === "PASS" ? "[PASS]" : "[FAIL]";
   console.log(`${icon} ${name}${details ? ": " + details : ""}`);
 }
 
 function logSection(name) {
-  console.log(`\n📋 ${name}`);
+  console.log(`\n[TEST SECTION] ${name}`);
   console.log("=".repeat(50));
 }
 
@@ -387,7 +387,7 @@ function testApiCompatibility() {
  * Run all unit tests
  */
 function runAllUnitTests() {
-  console.log("🧪 Unit Tests for @bringinxyz/lnurl-pay");
+  console.log("[UNIT TESTS] @bringinxyz/lnurl-pay");
   console.log("=".repeat(60));
 
   const startTime = Date.now();
@@ -401,9 +401,9 @@ function runAllUnitTests() {
     testApiCompatibility();
 
     const duration = Date.now() - startTime;
-    console.log(`\n🎉 All unit tests completed in ${duration}ms`);
+    console.log(`\n[SUCCESS] All unit tests completed in ${duration}ms`);
   } catch (error) {
-    console.error("\n💥 Unit test suite failed:", error.message);
+    console.error("\n[ERROR] Unit test suite failed:", error.message);
     process.exit(1);
   }
 }

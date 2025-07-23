@@ -1,62 +1,87 @@
 /**
  * Two-Step Process Example
  *
- * This example demonstrates the two-step process for requesting invoices,
- * which can be useful for getting service parameters first, then requesting
- * the invoice separately.
+ * This example demonstrates the two-step LNURL Pay process:
+ * 1. Get service parameters
+ * 2. Request invoice with those parameters
+ *
+ * This is useful for advanced integrations and custom UI flows.
  */
 
-const lnurlPay = require("@bringinxyz/lnurl-pay");
+const lnurlPay = require("../index.js");
 
-async function twoStepProcess() {
-  console.log("=== Two-Step Process Example ===\n");
-
-  const address = "merchant@bringin.xyz";
+async function twoStepProcessExample() {
+  console.log("[EXAMPLE] Two-Step LNURL Pay Process");
+  console.log("=".repeat(60));
 
   try {
     // Step 1: Get service parameters
-    console.log("Step 1: Getting service parameters...");
+    console.log("[STEP 1] Getting service parameters...");
+    console.log("-".repeat(40));
+
     const params = await lnurlPay.requestPayServiceParams({
-      lnUrlOrAddress: address,
-      posMode: true,
+      lnUrlOrAddress: "merchant@bringin.xyz",
+      posMode: true, // Enable POS mode for lower minimums
     });
 
-    console.log("✅ Service parameters retrieved:");
-    console.log("   Domain:", params.domain);
-    console.log("   Min amount:", params.min, "sats");
-    console.log("   Max amount:", params.max, "sats");
-    console.log("   Description:", params.description);
-    console.log("   Comment allowed:", params.commentAllowed, "characters");
+    console.log("[SUCCESS] Service parameters retrieved!");
+    console.log("Domain:", params.domain);
+    console.log("Min amount:", params.min.toLocaleString(), "sats");
+    console.log("Max amount:", params.max.toLocaleString(), "sats");
+    console.log("Description:", params.description);
+    console.log("Comment allowed:", params.commentAllowed, "characters");
 
-    // Step 2: Request invoice using the parameters
-    console.log("\nStep 2: Requesting invoice with service parameters...");
+    if (params.image) {
+      console.log("Has image: Yes");
+    }
+
+    // Step 2: Request invoice with parameters
+    console.log("\n[STEP 2] Requesting invoice...");
+    console.log("-".repeat(40));
+
     const invoice = await lnurlPay.requestInvoiceWithServiceParams({
       params: params,
-      tokens: 75,
+      tokens: 75, // Amount in satoshis
       comment: "Two-step test",
     });
 
-    console.log("✅ Invoice generated successfully!");
-    console.log("   Amount:", 75, "sats");
-    console.log("   Invoice:", invoice.invoice.substring(0, 50) + "...");
+    console.log("[SUCCESS] Invoice generated!");
+    console.log("Amount:", 75, "sats");
+    console.log("Invoice:", invoice.invoice.substring(0, 50) + "...");
 
     if (invoice.successAction) {
-      console.log("   Success message:", invoice.successAction.message);
+      console.log("Success action:", invoice.successAction.tag);
+      if (invoice.successAction.message) {
+        console.log("Success message:", invoice.successAction.message);
+      }
     }
 
-    console.log("\n🎉 Two-step process completed successfully!");
-    console.log("This approach is useful when you want to:");
-    console.log("   • Cache service parameters for multiple invoices");
-    console.log("   • Validate amounts before requesting invoices");
-    console.log("   • Show payment options to users before payment");
+    // Step 3: Show the complete response
+    console.log("\n[STEP 3] Complete Response");
+    console.log("-".repeat(40));
+
+    console.log("Full invoice response:");
+    console.log(JSON.stringify(invoice, null, 2));
+
+    console.log("\n[INFO] Two-step process completed successfully!");
+    console.log("This approach gives you more control over the payment flow.");
+    console.log(
+      "Useful for: Custom UIs, payment validation, advanced integrations"
+    );
   } catch (error) {
-    console.error("❌ Two-step process failed:", error.message);
+    console.error("[ERROR] Two-step process failed:", error.message);
+
+    if (error.message.includes("Amount too small")) {
+      console.log("[HINT] Try increasing the amount or using POS mode");
+    } else if (error.message.includes("Invalid Lightning address")) {
+      console.log("[HINT] Check the Lightning address format");
+    }
   }
 }
 
 // Run the example
 if (require.main === module) {
-  twoStepProcess().catch(console.error);
+  twoStepProcessExample().catch(console.error);
 }
 
-module.exports = twoStepProcess;
+module.exports = twoStepProcessExample;

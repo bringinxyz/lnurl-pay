@@ -5,10 +5,11 @@
  * that would be impossible with standard lnurl-pay!
  */
 
-const lnurlPay = require("@bringinxyz/lnurl-pay");
+const lnurlPay = require("../index.js");
 
 async function posModeExample() {
-  console.log("=== POS Mode Example ===\n");
+  console.log("[EXAMPLE] POS Mode Example");
+  console.log("=".repeat(50));
 
   try {
     // Micro-payment that would be impossible with standard mode
@@ -20,7 +21,7 @@ async function posModeExample() {
       comment: "Small tip",
     });
 
-    console.log("✅ Micro-payment invoice generated!");
+    console.log("[SUCCESS] Micro-payment invoice generated!");
     console.log("Amount:", 50, "sats (impossible with standard mode)");
     console.log("Invoice:", microInvoice.invoice.substring(0, 50) + "...");
     console.log("Description:", microInvoice.params.description);
@@ -29,12 +30,12 @@ async function posModeExample() {
       console.log("Success message:", microInvoice.successAction.message);
     }
 
-    console.log("\n🚀 POS mode enables micro-payments!");
+    console.log("\n[INFO] POS mode enables micro-payments!");
     console.log("Standard minimum: 22,000+ sats");
     console.log("POS minimum: 20+ sats");
     console.log("Reduction: 99.9% lower minimums!");
   } catch (error) {
-    console.error("❌ Error:", error.message);
+    console.error("[ERROR] Error:", error.message);
   }
 }
 

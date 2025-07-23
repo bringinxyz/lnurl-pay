@@ -5,7 +5,7 @@
  * and maintains compatibility with lnurl-pay.
  */
 
-const lnurlPay = require("@bringinxyz/lnurl-pay");
+const lnurlPay = require("../index.js");
 
 // Test configuration
 const TEST_ADDRESS = "prashanth@bringin.xyz";
@@ -15,12 +15,12 @@ const TEST_AMOUNTS = [50, 100, 500, 1000, 25000];
  * Test utilities
  */
 function logTest(name, status, details = "") {
-  const icon = status === "PASS" ? "✅" : "❌";
+  const icon = status === "PASS" ? "[PASS]" : "[FAIL]";
   console.log(`${icon} ${name}${details ? ": " + details : ""}`);
 }
 
 function logSection(name) {
-  console.log(`\n📋 ${name}`);
+  console.log(`\n[TEST SECTION] ${name}`);
   console.log("=".repeat(50));
 }
 
@@ -247,7 +247,7 @@ async function testMultipleAmounts() {
  * Run all tests
  */
 async function runAllTests() {
-  console.log("🧪 Integration Tests for @bringinxyz/lnurl-pay");
+  console.log("[INTEGRATION TESTS] @bringinxyz/lnurl-pay");
   console.log("=".repeat(60));
 
   const startTime = Date.now();
@@ -261,9 +261,9 @@ async function runAllTests() {
     await testMultipleAmounts();
 
     const duration = Date.now() - startTime;
-    console.log(`\n🎉 All tests completed in ${duration}ms`);
+    console.log(`\n[SUCCESS] All tests completed in ${duration}ms`);
   } catch (error) {
-    console.error("\n💥 Test suite failed:", error.message);
+    console.error("\n[ERROR] Test suite failed:", error.message);
     process.exit(1);
   }
 }
