@@ -1,12 +1,12 @@
-# Publishing Guide for @bringin/lnurl-pay
+# Publishing Guide for @bringinxyz/lnurl-pay
 
-This guide explains how to publish the `@bringin/lnurl-pay` package to NPM.
+This guide explains how to publish the `@bringinxyz/lnurl-pay` package to NPM.
 
 ## Prerequisites
 
-1. **NPM Account**: You must have access to the `@bringin` organization on NPM
+1. **NPM Account**: You must have access to the `@bringinxyz` organization on NPM
 2. **Authentication**: Be logged in to NPM with the Bringin account
-3. **Permissions**: Have publish access to the `@bringin` scope
+3. **Permissions**: Have publish access to the `@bringinxyz` scope
 
 ## Publishing Steps
 
@@ -26,7 +26,7 @@ Ensure the package.json has the correct scoped configuration:
 
 ```json
 {
-  "name": "@bringin/lnurl-pay",
+  "name": "@bringinxyz/lnurl-pay",
   "publishConfig": {
     "access": "public"
   }
@@ -73,10 +73,10 @@ npm publish --access public
 
 ```bash
 # Check the published package
-npm info @bringin/lnurl-pay
+npm info @bringinxyz/lnurl-pay
 
 # View package on NPM
-open https://www.npmjs.com/package/@bringin/lnurl-pay
+open https://www.npmjs.com/package/@bringinxyz/lnurl-pay
 ```
 
 ## Version Management
@@ -109,7 +109,7 @@ Before publishing, ensure:
 - [ ] Examples work correctly
 - [ ] Documentation is up to date
 - [ ] Version number is correct
-- [ ] Package name is `@bringin/lnurl-pay`
+- [ ] Package name is `@bringinxyz/lnurl-pay`
 - [ ] `publishConfig.access` is set to `"public"`
 - [ ] All files are included in the package
 - [ ] No sensitive information is exposed
@@ -120,20 +120,20 @@ Before publishing, ensure:
 
 1. **Access Denied**
    ```bash
-   npm ERR! 403 Forbidden - PUT https://registry.npmjs.org/@bringin/lnurl-pay
+   npm ERR! 403 Forbidden - PUT https://registry.npmjs.org/@bringinxyz/lnurl-pay
    ```
    - Ensure you're logged in with the correct account
-   - Verify you have publish permissions to `@bringin` scope
+   - Verify you have publish permissions to `@bringinxyz` scope
 
 2. **Package Already Exists**
    ```bash
-   npm ERR! 409 Conflict - PUT https://registry.npmjs.org/@bringin/lnurl-pay
+   npm ERR! 409 Conflict - PUT https://registry.npmjs.org/@bringinxyz/lnurl-pay
    ```
    - Update the version number before publishing
 
 3. **Invalid Package Name**
    ```bash
-   npm ERR! 400 Bad Request - PUT https://registry.npmjs.org/@bringin/lnurl-pay
+   npm ERR! 400 Bad Request - PUT https://registry.npmjs.org/@bringinxyz/lnurl-pay
    ```
    - Ensure package.json has the correct scoped name
 
@@ -161,4 +161,4 @@ After successful publication:
 
 ---
 
-**Note**: This package is published under the `@bringin` scope, making it an official Bringin library. Ensure all changes meet Bringin's quality standards before publishing. 
+**Note**: This package is published under the `@bringinxyz` scope, making it an official Bringin library. Ensure all changes meet Bringin's quality standards before publishing. 

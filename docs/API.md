@@ -1,13 +1,13 @@
-# @bringin/lnurl-pay API Documentation
+# @bringinxyz/lnurl-pay API Documentation
 
 ## Overview
 
-`@bringin/lnurl-pay` is a drop-in replacement for the `lnurl-pay` library that adds support for Bringin's POS mode, enabling Lightning micro-payments as low as 20 satoshis instead of the standard 22,000+ satoshis minimum.
+`@bringinxyz/lnurl-pay` is a drop-in replacement for the `lnurl-pay` library that adds support for Bringin's POS mode, enabling Lightning micro-payments as low as 20 satoshis instead of the standard 22,000+ satoshis minimum.
 
 ## Installation
 
 ```bash
-npm install @bringin/lnurl-pay
+npm install @bringinxyz/lnurl-pay
 ```
 
 **Optional dependency:** If you're using Node.js < 18, install axios for HTTP requests:
@@ -18,7 +18,7 @@ npm install axios
 ## Quick Start
 
 ```javascript
-const lnurlPay = require('@bringin/lnurl-pay');
+const lnurlPay = require('@bringinxyz/lnurl-pay');
 
 // Standard usage (same as lnurl-pay)
 const invoice = await lnurlPay.requestInvoice({
@@ -205,7 +205,7 @@ try {
 
 ### From lnurl-pay
 
-`@bringin/lnurl-pay` is a drop-in replacement for `lnurl-pay`. Your existing code will work unchanged:
+`@bringinxyz/lnurl-pay` is a drop-in replacement for `lnurl-pay`. Your existing code will work unchanged:
 
 ```javascript
 // Before (lnurl-pay)
@@ -215,8 +215,8 @@ const invoice = await lnurlPay.requestInvoice({
   tokens: 25000
 });
 
-// After (@bringin/lnurl-pay) - NO CHANGES NEEDED!
-const lnurlPay = require('@bringin/lnurl-pay');
+// After (@bringinxyz/lnurl-pay) - NO CHANGES NEEDED!
+const lnurlPay = require('@bringinxyz/lnurl-pay');
 const invoice = await lnurlPay.requestInvoice({
   lnUrlOrAddress: 'merchant@domain.com',
   tokens: 25000
@@ -336,7 +336,7 @@ For browser environments, the library automatically uses the built-in `fetch` AP
 
 ```html
 <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch"></script>
-<script src="@bringin/lnurl-pay.js"></script>
+<script src="@bringinxyz/lnurl-pay.js"></script>
 ```
 
 ## Node.js Support
@@ -356,7 +356,7 @@ See the `examples/` directory for complete working examples:
 
 ## Support
 
-- **GitHub Issues**: https://github.com/bringinxyz/bringin-lnurl-pay/issues
-- **Documentation**: https://github.com/bringinxyz/bringin-lnurl-pay#readme
-- **NPM Package**: https://www.npmjs.com/package/@bringin/lnurl-pay
+- **GitHub Issues**: https://github.com/bringinxyz/lnurl-pay/issues
+- **Documentation**: https://github.com/bringinxyz/lnurl-pay#readme
+- **NPM Package**: https://www.npmjs.com/package/@bringinxyz/lnurl-pay
 - **Company Website**: https://bringin.xyz 
