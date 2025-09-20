@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js CI](https://github.com/bringinxyz/bringin-lnurl-pay/actions/workflows/node.js.yml/badge.svg)](https://github.com/bringinxyz/bringin-lnurl-pay/actions/workflows/node.js.yml)
 
-Enhanced LNURL Pay library with Bringin POS mode support. A drop-in replacement for `lnurl-pay` that enables micro-payments down to 20 satoshis.
+Enhanced LNURL Pay library with Bringin LN Addresses. A drop-in replacement for `lnurl-pay` that enables micro-payments and auto conversion to Euro
 
 ## Features
 
